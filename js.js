@@ -14,13 +14,4 @@ document.addEventListener("click", function () {
     document.querySelector(`#card${i + 1}`).textContent = selectedCard.join("");
     console.log(selectedCard);
   }
-
-  //   let selectedColor = [];
-  //   for (let i = 0; i < 6; i++) {
-  //     let randomizer = Math.floor(Math.random() * 16);
-  //     selectedColor.unshift(colorPickArr[randomizer]);
-  //   }
-  //   let colorName = "#" + selectedColor.join("");
-
-  //   document.querySelector("body").style.backgroundColor = colorName;
 });
