@@ -2,7 +2,7 @@
 
 let cardQueue = 0;
 let cardValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
-let cardSuit = ["♠️", "♣️", "♥️", "♦️"];
+let cardSuit = ["♠️", "♣", "♥️", "♦️"];
 
 document.addEventListener("click", function () {
   // Card Suit and values
@@ -19,11 +19,12 @@ document.addEventListener("click", function () {
   console.log(cardQueue);
   if (cardQueue > 4) {
     cardQueue = 0;
-    document.querySelector(`#card0`).textContent = " ";
-    document.querySelector(`#card1`).textContent = " ";
-    document.querySelector(`#card2`).textContent = " ";
-    document.querySelector(`#card3`).textContent = " ";
-    document.querySelector(`#card4`).textContent = " ";
+    for (let i = 0; i < 5; i++) {
+      document.querySelector(`#card${i}`).textContent = " ";
+      document.querySelector(
+        `#card${i}`
+      ).style.background = `url(cards/cardBack.jpg)`;
+    }
     document.querySelector("#suz").textContent = "Again";
   } else {
     // document.querySelector(`#card${cardQueue}`).textContent = b + a;
